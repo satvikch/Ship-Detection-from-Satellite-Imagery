@@ -1,4 +1,4 @@
-# Python Kernel for Ship Detection in Satellite Images
+# Ship Detection in Satellite Images using Mask-RCNN
 
 This repository houses the Python code developed as part of a project to detect and segment ships in satellite imagery, leveraging the power of machine learning with Keras and the Mask R-CNN architecture. It builds on the work found in [MaskRCNN by Matterport](https://github.com/matterport/Mask_RCNN) and uses data from the [Airbus Ship Detection Competition hosted in kaggle](https://www.kaggle.com/c/airbus-ship-detection) on Kaggle.
 
