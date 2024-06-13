@@ -4,26 +4,26 @@ This repository houses the Python code developed as part of a project to detect 
 
 ## Our Approach
 
-Our project doesn't modify the original [MaskRCNN by Matterport](https://github.com/matterport/Mask_RCNN) implementation exactly. Instead, we focus on preparing and processing the data necessary to fit the model. We also adapt the output post-processing steps to better suit our needs, drawing inspiration from [Matterport's MASKRCNN implementation](https://github.com/matterport/Mask_RCNN).
+Our project needs to precisely modify the original [MaskRCNN by Matterport] implementation (https://github.com/matterport/Mask_RCNN). Instead, we focus on preparing and processing the data necessary to fit the model. We also adapt the output post-processing steps to suit our needs better, drawing inspiration from [Matterport's MASKRCNN implementation](https://github.com/matterport/Mask_RCNN).
 
 ## Preparing the Data
 
 1. Download the Kaggle DataSet From the [Airbus Ship Detection Competition page](https://www.kaggle.com/c/airbus-ship-detection).
 
-2. Extract all of them inside the `data` folder. You should have two folder, `train_v2` and `test_v2` containing the training and testing image dataset. Also you will have two csv files, one is `train_ship_segmentation_v2.csv` and another is `sample_submission_v2.csv`.
+2. Extract all of them inside the `data` folder. You should have two folders, `train_v2` and `test_v2`, containing the training and testing image dataset. Also you will have two csv files, one is `train_ship_segmentation_v2.csv` and another is `sample_submission_v2.csv`.
 
 ## Training
 
-Since our training data is ready inside our `data` folder, it's time to train the model. For our convinience, we have added a config folder inside the keras_maskrcnn and placed a config.ini, where we have changed the anchor size, because ship instances were mostly small and we wanted to detect all the small ships.
+Since our training data is ready inside our `data` folder, it's time to train the model. For our convenience, we have added a config folder inside the keras_maskrcnn and placed a config.ini, where we have changed the anchor size because ship instances were primarily small, and we wanted to detect all the small ships.
 
-Assuming we have the annotation.csv, class_ids.csv, we can now proceed to the training.
+We can now proceed to the training if we have the annotation.csv and class_ids.csv.
 
-1. Download the Coco weight provided from [COCO dataset](https://cocodataset.org/#home). We used the
+1. Download the Coco weight from [COCO dataset](https://cocodataset.org/#home). We used the
    mask_rcnn_coco.h5
 
 ## References:
 
-Lots of references of codes and implemntation were taken from the various sources, which are not least but listed below:
+Lots of references of codes and implementation were taken from various sources, which are not least listed below:
 
-1. [https://github.com/matterport/Mask_RCNN] Many of the utility functions were actually the modified version available in the `utility.py` of matterport's Mask RCNN.
+1. [https://github.com/matterport/Mask_RCNN]  Matterport Mask RCNN.
 2. [Kaggle Airbus Ship Detection competition](https://www.kaggle.com/c/airbus-ship-detection), Kernels.
